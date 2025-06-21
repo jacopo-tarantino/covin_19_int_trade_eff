@@ -1,0 +1,371 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jacopotarantino/Downloads/log tesi tarantino.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 7 Jun 2022, 08:34:26
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A  mortality_rate_B,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.1732{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0031{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0014{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}2{txt},{res}2449{txt}){col 67}={col 70}{res}   360.71
+{txt}corr(u_i, Xb) = {res}-0.2771{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 82:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}         log_exp{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mortality_rate_A {c |}{col 18}{res}{space 2}-3.358883{col 30}{space 2} .2384736{col 41}{space 1}  -14.08{col 50}{space 3}0.000{col 58}{space 4}-3.826514{col 71}{space 3}-2.891252
+{txt}mortality_rate_B {c |}{col 18}{res}{space 2} -4.45243{col 30}{space 2} .2865869{col 41}{space 1}  -15.54{col 50}{space 3}0.000{col 58}{space 4}-5.014408{col 71}{space 3}-3.890452
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} 3.530366{col 30}{space 2} .0143664{col 41}{space 1}  245.74{col 50}{space 3}0.000{col 58}{space 4} 3.502194{col 71}{space 3} 3.558537
+{txt}{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         sigma_u {c |} {res} 2.6550119
+         {txt}sigma_e {c |} {res} .50012013
+             {txt}rho {c |} {res} .96573325{txt}   (fraction of variance due to u_i)
+{hline 17}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.1942{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0032{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0009{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}4{txt},{res}2449{txt}){col 67}={col 70}{res}   202.31
+{txt}corr(u_i, Xb) = {res}-0.2289{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 82:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}         log_exp{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mortality_rate_A {c |}{col 18}{res}{space 2}-2.472449{col 30}{space 2} .3191482{col 41}{space 1}   -7.75{col 50}{space 3}0.000{col 58}{space 4}-3.098277{col 71}{space 3} -1.84662
+{txt}mortality_rate_B {c |}{col 18}{res}{space 2}-3.516373{col 30}{space 2} .2787973{col 41}{space 1}  -12.61{col 50}{space 3}0.000{col 58}{space 4}-4.063076{col 71}{space 3} -2.96967
+{txt}{space 12}vaxA {c |}{col 18}{res}{space 2}  .005003{col 30}{space 2} .0022799{col 41}{space 1}    2.19{col 50}{space 3}0.028{col 58}{space 4} .0005322{col 71}{space 3} .0094737
+{txt}{space 12}vaxB {c |}{col 18}{res}{space 2} .0076326{col 30}{space 2} .0012143{col 41}{space 1}    6.29{col 50}{space 3}0.000{col 58}{space 4} .0052515{col 71}{space 3} .0100137
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} 3.402083{col 30}{space 2} .0236983{col 41}{space 1}  143.56{col 50}{space 3}0.000{col 58}{space 4} 3.355612{col 71}{space 3} 3.448553
+{txt}{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         sigma_u {c |} {res} 2.6219594
+         {txt}sigma_e {c |} {res} .49393755
+             {txt}rho {c |} {res} .96572743{txt}   (fraction of variance due to u_i)
+{hline 17}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB vax_gdp_A vax_gdp_B,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.1990{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0031{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0009{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}6{txt},{res}2449{txt}){col 67}={col 70}{res}   136.46
+{txt}corr(u_i, Xb) = {res}-0.2399{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 82:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}         log_exp{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mortality_rate_A {c |}{col 18}{res}{space 2}-2.405714{col 30}{space 2} .3500546{col 41}{space 1}   -6.87{col 50}{space 3}0.000{col 58}{space 4}-3.092148{col 71}{space 3} -1.71928
+{txt}mortality_rate_B {c |}{col 18}{res}{space 2}-3.748341{col 30}{space 2} .2848765{col 41}{space 1}  -13.16{col 50}{space 3}0.000{col 58}{space 4}-4.306965{col 71}{space 3}-3.189718
+{txt}{space 12}vaxA {c |}{col 18}{res}{space 2} .0048822{col 30}{space 2} .0026087{col 41}{space 1}    1.87{col 50}{space 3}0.061{col 58}{space 4}-.0002332{col 71}{space 3} .0099977
+{txt}{space 12}vaxB {c |}{col 18}{res}{space 2} .0166278{col 30}{space 2} .0027711{col 41}{space 1}    6.00{col 50}{space 3}0.000{col 58}{space 4} .0111939{col 71}{space 3} .0220617
+{txt}{space 7}vax_gdp_A {c |}{col 18}{res}{space 2}-.0001364{col 30}{space 2} .0036752{col 41}{space 1}   -0.04{col 50}{space 3}0.970{col 58}{space 4}-.0073432{col 71}{space 3} .0070704
+{txt}{space 7}vax_gdp_B {c |}{col 18}{res}{space 2}-.0111343{col 30}{space 2}  .003016{col 41}{space 1}   -3.69{col 50}{space 3}0.000{col 58}{space 4}-.0170484{col 71}{space 3}-.0052201
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} 3.412821{col 30}{space 2} .0245777{col 41}{space 1}  138.86{col 50}{space 3}0.000{col 58}{space 4} 3.364625{col 71}{space 3} 3.461016
+{txt}{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         sigma_u {c |} {res} 2.6292324
+         {txt}sigma_e {c |} {res} .49264577
+             {txt}rho {c |} {res} .96608235{txt}   (fraction of variance due to u_i)
+{hline 17}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB average_facial_coveringsA  average_facial_coveringsB,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.1974{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0026{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0007{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}6{txt},{res}2449{txt}){col 67}={col 70}{res}   136.22
+{txt}corr(u_i, Xb) = {res}-0.2240{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 91:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                  log_exp{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mortality_rate_A {c |}{col 27}{res}{space 2}-2.372036{col 39}{space 2} .3187028{col 50}{space 1}   -7.44{col 59}{space 3}0.000{col 67}{space 4}-2.996991{col 80}{space 3}-1.747081
+{txt}{space 9}mortality_rate_B {c |}{col 27}{res}{space 2}-3.488762{col 39}{space 2} .2788453{col 50}{space 1}  -12.51{col 59}{space 3}0.000{col 67}{space 4}-4.035559{col 80}{space 3}-2.941965
+{txt}{space 21}vaxA {c |}{col 27}{res}{space 2} .0045253{col 39}{space 2}  .002296{col 50}{space 1}    1.97{col 59}{space 3}0.049{col 67}{space 4}  .000023{col 80}{space 3} .0090276
+{txt}{space 21}vaxB {c |}{col 27}{res}{space 2} .0066394{col 39}{space 2} .0012337{col 50}{space 1}    5.38{col 59}{space 3}0.000{col 67}{space 4} .0042201{col 80}{space 3} .0090586
+{txt}average_facial_coveringsA {c |}{col 27}{res}{space 2} .0104586{col 39}{space 2} .0157941{col 50}{space 1}    0.66{col 59}{space 3}0.508{col 67}{space 4}-.0205125{col 80}{space 3} .0414297
+{txt}average_facial_coveringsB {c |}{col 27}{res}{space 2} .0513816{col 39}{space 2} .0177416{col 50}{space 1}    2.90{col 59}{space 3}0.004{col 67}{space 4} .0165915{col 80}{space 3} .0861717
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2}  3.23154{col 39}{space 2} .0709058{col 50}{space 1}   45.58{col 59}{space 3}0.000{col 67}{space 4} 3.092498{col 80}{space 3} 3.370581
+{txt}{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                  sigma_u {c |} {res} 2.6193554
+                  {txt}sigma_e {c |} {res} .49314135
+                      {txt}rho {c |} {res} .96576842{txt}   (fraction of variance due to u_i)
+{hline 26}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB  average_facial_coveringsA  average_facial_coveringsB  average_debtA  average_debtB average_debt_gdp_A average_debt_gdp_B,fe vce(cluster exports_code) 
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.2005{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0032{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0008{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}10{txt},{res}2449{txt}){col 67}={col 70}{res}    83.35
+{txt}corr(u_i, Xb) = {res}-0.2197{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 91:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                  log_exp{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mortality_rate_A {c |}{col 27}{res}{space 2}-2.314681{col 39}{space 2} .3193152{col 50}{space 1}   -7.25{col 59}{space 3}0.000{col 67}{space 4}-2.940837{col 80}{space 3}-1.688525
+{txt}{space 9}mortality_rate_B {c |}{col 27}{res}{space 2}-3.344101{col 39}{space 2} .2987765{col 50}{space 1}  -11.19{col 59}{space 3}0.000{col 67}{space 4}-3.929981{col 80}{space 3} -2.75822
+{txt}{space 21}vaxA {c |}{col 27}{res}{space 2} .0045602{col 39}{space 2} .0023154{col 50}{space 1}    1.97{col 59}{space 3}0.049{col 67}{space 4} .0000198{col 80}{space 3} .0091006
+{txt}{space 21}vaxB {c |}{col 27}{res}{space 2} .0071787{col 39}{space 2} .0012689{col 50}{space 1}    5.66{col 59}{space 3}0.000{col 67}{space 4} .0046905{col 80}{space 3} .0096669
+{txt}average_facial_coveringsA {c |}{col 27}{res}{space 2} .0091177{col 39}{space 2}  .015938{col 50}{space 1}    0.57{col 59}{space 3}0.567{col 67}{space 4}-.0221356{col 80}{space 3}  .040371
+{txt}average_facial_coveringsB {c |}{col 27}{res}{space 2} .0477755{col 39}{space 2} .0175999{col 50}{space 1}    2.71{col 59}{space 3}0.007{col 67}{space 4} .0132633{col 80}{space 3} .0822878
+{txt}{space 12}average_debtA {c |}{col 27}{res}{space 2} .0461794{col 39}{space 2} .0289113{col 50}{space 1}    1.60{col 59}{space 3}0.110{col 67}{space 4}-.0105136{col 80}{space 3} .1028725
+{txt}{space 12}average_debtB {c |}{col 27}{res}{space 2} .0778851{col 39}{space 2} .0318457{col 50}{space 1}    2.45{col 59}{space 3}0.015{col 67}{space 4} .0154379{col 80}{space 3} .1403324
+{txt}{space 7}average_debt_gdp_A {c |}{col 27}{res}{space 2}-.0586427{col 39}{space 2} .0353795{col 50}{space 1}   -1.66{col 59}{space 3}0.098{col 67}{space 4}-.1280194{col 80}{space 3} .0107341
+{txt}{space 7}average_debt_gdp_B {c |}{col 27}{res}{space 2}-.0651057{col 39}{space 2} .0387759{col 50}{space 1}   -1.68{col 59}{space 3}0.093{col 67}{space 4}-.1411426{col 80}{space 3} .0109312
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2} 3.185575{col 39}{space 2} .0766379{col 50}{space 1}   41.57{col 59}{space 3}0.000{col 67}{space 4} 3.035294{col 80}{space 3} 3.335857
+{txt}{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                  sigma_u {c |} {res} 2.6165597
+                  {txt}sigma_e {c |} {res} .49259354
+                      {txt}rho {c |} {res}  .9657713{txt}   (fraction of variance due to u_i)
+{hline 26}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB  average_facial_coveringsA  average_facial_coveringsB  average_supportA average_supportB average_support_gdp_A average_support_gdp_B,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.2129{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0033{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0007{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}10{txt},{res}2449{txt}){col 67}={col 70}{res}    94.24
+{txt}corr(u_i, Xb) = {res}-0.2152{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 91:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                  log_exp{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mortality_rate_A {c |}{col 27}{res}{space 2}-1.871238{col 39}{space 2} .3201802{col 50}{space 1}   -5.84{col 59}{space 3}0.000{col 67}{space 4} -2.49909{col 80}{space 3}-1.243386
+{txt}{space 9}mortality_rate_B {c |}{col 27}{res}{space 2}-3.347674{col 39}{space 2} .3097378{col 50}{space 1}  -10.81{col 59}{space 3}0.000{col 67}{space 4}-3.955049{col 80}{space 3}-2.740299
+{txt}{space 21}vaxA {c |}{col 27}{res}{space 2} .0047794{col 39}{space 2} .0023449{col 50}{space 1}    2.04{col 59}{space 3}0.042{col 67}{space 4} .0001812{col 80}{space 3} .0093775
+{txt}{space 21}vaxB {c |}{col 27}{res}{space 2} .0062502{col 39}{space 2}  .001259{col 50}{space 1}    4.96{col 59}{space 3}0.000{col 67}{space 4} .0037814{col 80}{space 3} .0087191
+{txt}average_facial_coveringsA {c |}{col 27}{res}{space 2} .0074856{col 39}{space 2} .0162576{col 50}{space 1}    0.46{col 59}{space 3}0.645{col 67}{space 4}-.0243945{col 80}{space 3} .0393657
+{txt}average_facial_coveringsB {c |}{col 27}{res}{space 2} .0340821{col 39}{space 2} .0185875{col 50}{space 1}    1.83{col 59}{space 3}0.067{col 67}{space 4}-.0023668{col 80}{space 3}  .070531
+{txt}{space 9}average_supportA {c |}{col 27}{res}{space 2} .1337446{col 39}{space 2} .0327018{col 50}{space 1}    4.09{col 59}{space 3}0.000{col 67}{space 4} .0696187{col 80}{space 3} .1978705
+{txt}{space 9}average_supportB {c |}{col 27}{res}{space 2} .1577124{col 39}{space 2}  .040576{col 50}{space 1}    3.89{col 59}{space 3}0.000{col 67}{space 4} .0781455{col 80}{space 3} .2372793
+{txt}{space 4}average_support_gdp_A {c |}{col 27}{res}{space 2} -.061444{col 39}{space 2}  .038953{col 50}{space 1}   -1.58{col 59}{space 3}0.115{col 67}{space 4}-.1378282{col 80}{space 3} .0149403
+{txt}{space 4}average_support_gdp_B {c |}{col 27}{res}{space 2}-.1627061{col 39}{space 2} .0444553{col 50}{space 1}   -3.66{col 59}{space 3}0.000{col 67}{space 4}  -.24988{col 80}{space 3}-.0755322
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2} 3.090262{col 39}{space 2} .0838159{col 50}{space 1}   36.87{col 59}{space 3}0.000{col 67}{space 4} 2.925905{col 80}{space 3} 3.254619
+{txt}{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                  sigma_u {c |} {res} 2.6143755
+                  {txt}sigma_e {c |} {res}  .4887567
+                      {txt}rho {c |} {res} .96623008{txt}   (fraction of variance due to u_i)
+{hline 26}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB average_facial_coveringsA  average_facial_coveringsB average_contA average_contB average_cont_gdp_A verage_cont_gdp_B,fe vce(cluster exports_code)
+{err}variable {bf}verage_cont_gdp_B{sf} not found
+{txt}{search r(111), local:r(111);}
+
+end of do-file
+
+{search r(111), local:r(111);}
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB average_facial_coveringsA  average_facial_coveringsB average_contA average_contB average_cont_gdp_A average_cont_gdp_B,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.2414{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0000{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0004{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}10{txt},{res}2449{txt}){col 67}={col 70}{res}   103.71
+{txt}corr(u_i, Xb) = {res}-0.2273{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 91:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                  log_exp{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mortality_rate_A {c |}{col 27}{res}{space 2}-1.485843{col 39}{space 2} .3360879{col 50}{space 1}   -4.42{col 59}{space 3}0.000{col 67}{space 4}-2.144889{col 80}{space 3}-.8267971
+{txt}{space 9}mortality_rate_B {c |}{col 27}{res}{space 2}-3.145785{col 39}{space 2} .3073641{col 50}{space 1}  -10.23{col 59}{space 3}0.000{col 67}{space 4}-3.748506{col 80}{space 3}-2.543065
+{txt}{space 21}vaxA {c |}{col 27}{res}{space 2} .0010724{col 39}{space 2} .0023546{col 50}{space 1}    0.46{col 59}{space 3}0.649{col 67}{space 4}-.0035447{col 80}{space 3} .0056896
+{txt}{space 21}vaxB {c |}{col 27}{res}{space 2} .0036022{col 39}{space 2} .0012867{col 50}{space 1}    2.80{col 59}{space 3}0.005{col 67}{space 4} .0010792{col 80}{space 3} .0061253
+{txt}average_facial_coveringsA {c |}{col 27}{res}{space 2}-.0069975{col 39}{space 2} .0165619{col 50}{space 1}   -0.42{col 59}{space 3}0.673{col 67}{space 4}-.0394742{col 80}{space 3} .0254792
+{txt}average_facial_coveringsB {c |}{col 27}{res}{space 2} .0222537{col 39}{space 2}  .018628{col 50}{space 1}    1.19{col 59}{space 3}0.232{col 67}{space 4}-.0142745{col 80}{space 3} .0587819
+{txt}{space 12}average_contA {c |}{col 27}{res}{space 2}-.0047023{col 39}{space 2} .0016437{col 50}{space 1}   -2.86{col 59}{space 3}0.004{col 67}{space 4}-.0079255{col 80}{space 3} -.001479
+{txt}{space 12}average_contB {c |}{col 27}{res}{space 2}-.0147971{col 39}{space 2} .0017187{col 50}{space 1}   -8.61{col 59}{space 3}0.000{col 67}{space 4}-.0181674{col 80}{space 3}-.0114268
+{txt}{space 7}average_cont_gdp_A {c |}{col 27}{res}{space 2} .0017039{col 39}{space 2} .0016965{col 50}{space 1}    1.00{col 59}{space 3}0.315{col 67}{space 4}-.0016227{col 80}{space 3} .0050306
+{txt}{space 7}average_cont_gdp_B {c |}{col 27}{res}{space 2} .0101911{col 39}{space 2} .0019436{col 50}{space 1}    5.24{col 59}{space 3}0.000{col 67}{space 4} .0063798{col 80}{space 3} .0140024
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2} 4.207054{col 39}{space 2} .1194315{col 50}{space 1}   35.23{col 59}{space 3}0.000{col 67}{space 4} 3.972857{col 80}{space 3} 4.441251
+{txt}{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                  sigma_u {c |} {res}  2.623062
+                  {txt}sigma_e {c |} {res} .47984238
+                      {txt}rho {c |} {res} .96761942{txt}   (fraction of variance due to u_i)
+{hline 26}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB average_facial_coveringsA  average_facial_coveringsB average_contA average_contB average_cont_gdp_A average_cont_gdp_B average_debtA average_debtB average_debt_gdp_A average_debt_gdp_B,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.2445{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0001{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0002{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}14{txt},{res}2449{txt}){col 67}={col 70}{res}    74.64
+{txt}corr(u_i, Xb) = {res}-0.2170{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 91:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                  log_exp{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mortality_rate_A {c |}{col 27}{res}{space 2}-1.476281{col 39}{space 2} .3382205{col 50}{space 1}   -4.36{col 59}{space 3}0.000{col 67}{space 4}-2.139508{col 80}{space 3} -.813053
+{txt}{space 9}mortality_rate_B {c |}{col 27}{res}{space 2}-3.068677{col 39}{space 2} .3203227{col 50}{space 1}   -9.58{col 59}{space 3}0.000{col 67}{space 4}-3.696808{col 80}{space 3}-2.440545
+{txt}{space 21}vaxA {c |}{col 27}{res}{space 2}  .000726{col 39}{space 2} .0023702{col 50}{space 1}    0.31{col 59}{space 3}0.759{col 67}{space 4}-.0039218{col 80}{space 3} .0053738
+{txt}{space 21}vaxB {c |}{col 27}{res}{space 2} .0037477{col 39}{space 2}  .001294{col 50}{space 1}    2.90{col 59}{space 3}0.004{col 67}{space 4} .0012103{col 80}{space 3} .0062852
+{txt}average_facial_coveringsA {c |}{col 27}{res}{space 2}-.0049514{col 39}{space 2} .0168456{col 50}{space 1}   -0.29{col 59}{space 3}0.769{col 67}{space 4}-.0379844{col 80}{space 3} .0280816
+{txt}average_facial_coveringsB {c |}{col 27}{res}{space 2} .0209308{col 39}{space 2} .0184371{col 50}{space 1}    1.14{col 59}{space 3}0.256{col 67}{space 4}-.0152232{col 80}{space 3} .0570847
+{txt}{space 12}average_contA {c |}{col 27}{res}{space 2}-.0045562{col 39}{space 2}  .001635{col 50}{space 1}   -2.79{col 59}{space 3}0.005{col 67}{space 4}-.0077623{col 80}{space 3}-.0013502
+{txt}{space 12}average_contB {c |}{col 27}{res}{space 2}-.0146659{col 39}{space 2} .0017103{col 50}{space 1}   -8.58{col 59}{space 3}0.000{col 67}{space 4}-.0180197{col 80}{space 3}-.0113122
+{txt}{space 7}average_cont_gdp_A {c |}{col 27}{res}{space 2} .0011715{col 39}{space 2} .0017187{col 50}{space 1}    0.68{col 59}{space 3}0.496{col 67}{space 4}-.0021988{col 80}{space 3} .0045418
+{txt}{space 7}average_cont_gdp_B {c |}{col 27}{res}{space 2} .0098691{col 39}{space 2}  .001927{col 50}{space 1}    5.12{col 59}{space 3}0.000{col 67}{space 4} .0060904{col 80}{space 3} .0136478
+{txt}{space 12}average_debtA {c |}{col 27}{res}{space 2} .0335563{col 39}{space 2} .0279503{col 50}{space 1}    1.20{col 59}{space 3}0.230{col 67}{space 4}-.0212524{col 80}{space 3}  .088365
+{txt}{space 12}average_debtB {c |}{col 27}{res}{space 2}   .06907{col 39}{space 2} .0305762{col 50}{space 1}    2.26{col 59}{space 3}0.024{col 67}{space 4} .0091122{col 80}{space 3} .1290278
+{txt}{space 7}average_debt_gdp_A {c |}{col 27}{res}{space 2}-.0699811{col 39}{space 2} .0347955{col 50}{space 1}   -2.01{col 59}{space 3}0.044{col 67}{space 4}-.1382127{col 80}{space 3}-.0017495
+{txt}{space 7}average_debt_gdp_B {c |}{col 27}{res}{space 2}-.0854498{col 39}{space 2} .0372426{col 50}{space 1}   -2.29{col 59}{space 3}0.022{col 67}{space 4}-.1584801{col 80}{space 3}-.0124195
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2}  4.21672{col 39}{space 2} .1223071{col 50}{space 1}   34.48{col 59}{space 3}0.000{col 67}{space 4} 3.976884{col 80}{space 3} 4.456556
+{txt}{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                  sigma_u {c |} {res} 2.6171556
+                  {txt}sigma_e {c |} {res} .47925488
+                      {txt}rho {c |} {res} .96755486{txt}   (fraction of variance due to u_i)
+{hline 26}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/61/tm1q93sj2qgdrvj3r6cp8f_m0000gn/T//SD03730.000000"
+{txt}
+{com}. xtreg log_exp mortality_rate_A mortality_rate_B vaxA vaxB average_facial_coveringsA  average_facial_coveringsB average_contA average_contB average_cont_gdp_A average_cont_gdp_B average_debtA average_debtB average_debt_gdp_A average_debt_gdp_B,fe vce(cluster exports_code)
+{res}
+{txt}Fixed-effects (within) regression{col 49}Number of obs{col 67}={col 69}{res}     4,900
+{txt}Group variable: {res}exports_code{txt}{col 49}Number of groups{col 67}={col 69}{res}     2,450
+
+{txt}R-squared:{col 49}Obs per group:
+     Within  = {res}0.2445{col 63}{txt}min{col 67}={col 69}{res}         2
+{txt}     Between = {res}0.0001{col 63}{txt}avg{col 67}={col 69}{res}       2.0
+{txt}     Overall = {res}0.0002{col 63}{txt}max{col 67}={col 69}{res}         2
+
+{txt}{col 49}F({res}14{txt},{res}2449{txt}){col 67}={col 70}{res}    74.64
+{txt}corr(u_i, Xb) = {res}-0.2170{txt}{col 49}Prob > F{col 67}={col 73}{res}0.0000
+
+{txt}{ralign 91:(Std. err. adjusted for {res:2,450} clusters in {res:exports_code})}
+{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                  log_exp{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mortality_rate_A {c |}{col 27}{res}{space 2}-1.476281{col 39}{space 2} .3382205{col 50}{space 1}   -4.36{col 59}{space 3}0.000{col 67}{space 4}-2.139508{col 80}{space 3} -.813053
+{txt}{space 9}mortality_rate_B {c |}{col 27}{res}{space 2}-3.068677{col 39}{space 2} .3203227{col 50}{space 1}   -9.58{col 59}{space 3}0.000{col 67}{space 4}-3.696808{col 80}{space 3}-2.440545
+{txt}{space 21}vaxA {c |}{col 27}{res}{space 2}  .000726{col 39}{space 2} .0023702{col 50}{space 1}    0.31{col 59}{space 3}0.759{col 67}{space 4}-.0039218{col 80}{space 3} .0053738
+{txt}{space 21}vaxB {c |}{col 27}{res}{space 2} .0037477{col 39}{space 2}  .001294{col 50}{space 1}    2.90{col 59}{space 3}0.004{col 67}{space 4} .0012103{col 80}{space 3} .0062852
+{txt}average_facial_coveringsA {c |}{col 27}{res}{space 2}-.0049514{col 39}{space 2} .0168456{col 50}{space 1}   -0.29{col 59}{space 3}0.769{col 67}{space 4}-.0379844{col 80}{space 3} .0280816
+{txt}average_facial_coveringsB {c |}{col 27}{res}{space 2} .0209308{col 39}{space 2} .0184371{col 50}{space 1}    1.14{col 59}{space 3}0.256{col 67}{space 4}-.0152232{col 80}{space 3} .0570847
+{txt}{space 12}average_contA {c |}{col 27}{res}{space 2}-.0045562{col 39}{space 2}  .001635{col 50}{space 1}   -2.79{col 59}{space 3}0.005{col 67}{space 4}-.0077623{col 80}{space 3}-.0013502
+{txt}{space 12}average_contB {c |}{col 27}{res}{space 2}-.0146659{col 39}{space 2} .0017103{col 50}{space 1}   -8.58{col 59}{space 3}0.000{col 67}{space 4}-.0180197{col 80}{space 3}-.0113122
+{txt}{space 7}average_cont_gdp_A {c |}{col 27}{res}{space 2} .0011715{col 39}{space 2} .0017187{col 50}{space 1}    0.68{col 59}{space 3}0.496{col 67}{space 4}-.0021988{col 80}{space 3} .0045418
+{txt}{space 7}average_cont_gdp_B {c |}{col 27}{res}{space 2} .0098691{col 39}{space 2}  .001927{col 50}{space 1}    5.12{col 59}{space 3}0.000{col 67}{space 4} .0060904{col 80}{space 3} .0136478
+{txt}{space 12}average_debtA {c |}{col 27}{res}{space 2} .0335563{col 39}{space 2} .0279503{col 50}{space 1}    1.20{col 59}{space 3}0.230{col 67}{space 4}-.0212524{col 80}{space 3}  .088365
+{txt}{space 12}average_debtB {c |}{col 27}{res}{space 2}   .06907{col 39}{space 2} .0305762{col 50}{space 1}    2.26{col 59}{space 3}0.024{col 67}{space 4} .0091122{col 80}{space 3} .1290278
+{txt}{space 7}average_debt_gdp_A {c |}{col 27}{res}{space 2}-.0699811{col 39}{space 2} .0347955{col 50}{space 1}   -2.01{col 59}{space 3}0.044{col 67}{space 4}-.1382127{col 80}{space 3}-.0017495
+{txt}{space 7}average_debt_gdp_B {c |}{col 27}{res}{space 2}-.0854498{col 39}{space 2} .0372426{col 50}{space 1}   -2.29{col 59}{space 3}0.022{col 67}{space 4}-.1584801{col 80}{space 3}-.0124195
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2}  4.21672{col 39}{space 2} .1223071{col 50}{space 1}   34.48{col 59}{space 3}0.000{col 67}{space 4} 3.976884{col 80}{space 3} 4.456556
+{txt}{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                  sigma_u {c |} {res} 2.6171556
+                  {txt}sigma_e {c |} {res} .47925488
+                      {txt}rho {c |} {res} .96755486{txt}   (fraction of variance due to u_i)
+{hline 26}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jacopotarantino/Downloads/log tesi tarantino.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 7 Jun 2022, 08:36:42
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
